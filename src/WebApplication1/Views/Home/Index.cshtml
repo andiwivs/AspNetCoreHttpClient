@@ -1,8 +1,21 @@
-﻿
+﻿@model string[]
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Values";
 }
 
-<h1>Index</h1>
+<h1>Values</h1>
 
-Hello, wabbit!
+@if (Model?.Length == 0)
+{
+    <p>No values were returned</p>
+}
+else
+{
+<ul>
+    @foreach (var value in Model)
+    {
+        <li>Value: @value</li>
+    }
+</ul>
+}
