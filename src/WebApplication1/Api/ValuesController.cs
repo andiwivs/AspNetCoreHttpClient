@@ -1,18 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebApplication1.Api
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private static int GetCount = 0;
+
+
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            // simulate transient errors - only allow every 3rd request succeed
+            GetCount++;
+
+            if (GetCount % 3 != 0)
+                return Problem(detail: "This is a simulated error", statusCode: 500);
+
+            return Ok(new [] { "value1", "value2" });
         }
 
         // GET api/<controller>/5
