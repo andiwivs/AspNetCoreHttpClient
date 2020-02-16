@@ -12,10 +12,10 @@ namespace WebApplication1.Api
         [HttpGet]
         public IActionResult Get()
         {
-            // simulate transient errors - only allow every 3rd request succeed
+            // simulate transient errors - only allow every 9th request to succeed
             GetCount++;
 
-            if (GetCount % 3 != 0)
+            if (GetCount % 9 != 0)
                 return Problem(detail: "This is a simulated error", statusCode: 500);
 
             return Ok(new [] { "value1", "value2" });

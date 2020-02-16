@@ -20,7 +20,9 @@ namespace DummyService
                         TimeSpan.FromSeconds(5),
                         TimeSpan.FromSeconds(10)
                     })
-                );
+                )
+                .AddTransientHttpErrorPolicy(builder =>
+                    builder.RetryAsync(3));
 
             return services;
         }
