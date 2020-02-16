@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WebApplication1.Infrastructure
+namespace DummyService
 {
     public interface IProvideValues
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using WebApplication1.Infrastructure;
+using DummyService;
 
 namespace WebApplication1.Controllers
 {

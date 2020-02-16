@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.extensions.dependencyinjection" Version="3.1.1" />
+    <PackageReference Include="microsoft.extensions.http" Version="3.1.1" />
+    <PackageReference Include="newtonsoft.json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

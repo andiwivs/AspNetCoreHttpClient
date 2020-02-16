@@ -1,8 +1,9 @@
+using DummyService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WebApplication1.Infrastructure;
+using System;
 
 namespace WebApplication1
 {
@@ -10,8 +11,7 @@ namespace WebApplication1
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient();
-            services.AddSingleton<IProvideValues, LocalValuesProvider>();
+            services.AddDummyService(new Uri("http://localhost:5000/api/"));
 
             services.AddControllersWithViews();
         }
