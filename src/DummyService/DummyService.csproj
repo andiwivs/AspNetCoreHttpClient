@@ -8,7 +8,7 @@
     <PackageReference Include="microsoft.extensions.dependencyinjection" Version="3.1.1" />
     <PackageReference Include="microsoft.extensions.http" Version="3.1.1" />
     <PackageReference Include="microsoft.extensions.http.polly" Version="3.1.1" />
-    <PackageReference Include="newtonsoft.json" Version="12.0.3" />
+    <PackageReference Include="newtonsoft.json" Version="13.0.2" />
   </ItemGroup>
 
 </Project>
